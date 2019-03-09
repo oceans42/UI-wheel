@@ -3,23 +3,13 @@ import Button from './button'
 import Icon from './icon'
 import ButtonGroup from './button-group'
 
-
 Vue.component('g-button', Button)
 Vue.component('g-icon', Icon)
 Vue.component('g-button-group', ButtonGroup)
 
-
-new Vue({
-  el: '#app',
-  data: {
-    loading1: false,
-    loading2: true,
-    loading3: false
-  }
-})
-
 import chai from 'chai'
 import spies from 'chai-spies'
+
 chai.use(spies)
 
 const expect = chai.expect
@@ -87,7 +77,6 @@ const expect = chai.expect
   vm.$destroy()
 }
 {
-  // mock
   const Constructor = Vue.extend(Button)
   const vm = new Constructor({
     propsData: {
@@ -95,10 +84,8 @@ const expect = chai.expect
     }
   })
   vm.$mount()
-  vm.$on('click', function () {
-    expect(1).to.eq(1)
+  let spy = chai.spy(function () {
   })
-  let spy = chai.spy(function(){})
 
   vm.$on('click', spy)
   // 希望这个函数被执行
