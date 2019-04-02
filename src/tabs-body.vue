@@ -5,9 +5,9 @@
 </template>
 <script>
   export default {
-    name:'GuluTabsBody',
-    props:{
-
+    name: 'GuluTabsBody',
+    inject: ['eventBus'],
+    created(){
     }
   }
 </script>
