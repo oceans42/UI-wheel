@@ -14,8 +14,8 @@ import Toast from './toast'
 import plugin from './plugin'
 import Tabs from './tabs'
 import TabsHead from './tabs-head'
-import TabsItem from './tabs-item'
 import TabsBody from './tabs-body'
+import TabsItem from './tabs-item'
 import TabsPane from './tabs-pane'
 
 Vue.component('g-button', Button)
@@ -33,42 +33,42 @@ Vue.component('g-toast', Toast)
 Vue.use(plugin)
 Vue.component('g-tabs', Tabs)
 Vue.component('g-tabs-head', TabsHead)
-Vue.component('g-tabs-item', TabsItem)
 Vue.component('g-tabs-body', TabsBody)
+Vue.component('g-tabs-item', TabsItem)
 Vue.component('g-tabs-pane', TabsPane)
 
-// import createElement from 'vue'
-//
-//  const h = createElement
+import createElement from 'vue'
+
+const h = createElement
 
 new Vue({
   el: '#app',
   data: {
-    selectedTab:'sports'
+    selectedTab: 'sports'
   },
-  created() {
+  created(){
   },
   methods: {
     yyy(data){
       console.log('yyy')
       console.log(data)
     },
-    showToast1() {
+    showToast1(){
       this.showToast('top')
     },
-    showToast2() {
+    showToast2(){
       this.showToast('middle')
     },
-    showToast3() {
+    showToast3(){
       this.showToast('bottom')
     },
-    showToast(position) {
+    showToast(position){
       this.$toast(`你的智商目前为 ${parseInt(Math.random() * 100)}。你的智商需要充值！`, {
         position,
         enableHtml: false,
         closeButton: {
           text: '已充值',
-          callback() {
+          callback () {
             console.log('他说已经充值智商了')
           }
         },
