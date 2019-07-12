@@ -4,15 +4,13 @@
   </div>
 </template>
 <script>
-  export default {
-    name: 'GuluTabsBody',
-    inject: ['eventBus'],
-    created(){
-    }
-  }
+export default {
+  name: "GuluTabsBody",
+  inject: ["eventBus"],
+  created() {}
+};
 </script>
-<style lang="scss" scoped>
-  .tabs-body{
-
+<style>
+  .tabs-body {
   }
 </style>

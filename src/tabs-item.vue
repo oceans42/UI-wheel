@@ -5,7 +5,7 @@
 </template>
 <script>
   export default {
-    name:'GuluTabsItem',
+    name: 'GuluTabsItem',
     inject: ['eventBus'],
     data () {
       return {
@@ -56,7 +56,6 @@
     height: 100%;
     display: flex;
     align-items: center;
-
     &.active {
       color: $blue;
       font-weight: bold;
